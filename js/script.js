@@ -2,39 +2,64 @@
 
 const membri = [
     {
-        nome: 'Wayne',
-        cognome: 'Barnett',
+        nome: 'Wayne Barnett',
         ruolo: 'Founder & CEO',
-        foto: 'wayne-barnett-founder-ceo.jpg'
+        foto: 'img/wayne-barnett-founder-ceo.jpg'
     },
     {
-        nome: 'Angela',
-        cognome: 'Caroll',
+        nome: 'Angela Caroll',
         ruolo: 'Chief Editor',
-        foto: 'angela-caroll-chief-editor.jpg'
+        foto: 'img/angela-caroll-chief-editor.jpg'
     },
     {
-        nome: 'Walter',
-        cognome: 'Gordon',
+        nome: 'Walter Gordon',
         ruolo: 'Office Manager',
-        foto: 'walter-gordon-office-manager.jpg'
+        foto: 'img/walter-gordon-office-manager.jpg'
     },
     {
-        nome: 'Angela',
-        cognome: 'Lopez',
+        nome: 'Angela Lopez',
         ruolo: 'Social Media Manager',
-        foto:'angela-lopez-social-media-manager.jpg'
+        foto:'img/angela-lopez-social-media-manager.jpg'
     },
     {
-        nome: 'Scott',
-        cognome: 'Estrada',
+        nome: 'Scott Estrada',
         ruolo: 'Developer',
-        foto: 'scott-estrada-developer.jpg'
+        foto: 'img/scott-estrada-developer.jpg'
     },
     {
-        nome: 'Barbara',
-        cognome: 'Ramos',
+        nome: 'Barbara Ramos',
         ruolo: 'Graphic Designer',
-        foto: 'barbara-ramos-graphic-designer.jpg'
+        foto: 'img/barbara-ramos-graphic-designer.jpg'
     }
 ];
+console.log(membri);
+
+/* <div class="team-card">
+<div class="card-image">
+  <img
+    src="img/wayne-barnett-founder-ceo.jpg"
+    alt="Wayne Barnett"
+  />
+</div>
+<div class="card-text">
+  <h3>Wayne Barnett</h3>
+  <p>Founder & CEO</p>
+</div>
+</div> */
+
+function card() {
+    let cardMembri = document.getElementsByClassName('team-container')[0];
+    for (let i = 0; i < membri.length; i++) {
+        cardMembri.innerHTML += `
+    <div class="team-card">
+            <div class="card-image">
+                <img src=" ${membri[i].foto} " alt="Wayne Barnett"/>
+            </div>
+        <div class="card-text">
+            <h3> ${membri[i].nome} </h3>
+            <p> ${membri[i].ruolo} </p>
+         </div>
+    </div>`
+    }
+}
+card();
