@@ -34,18 +34,6 @@ const membri = [
 ];
 console.log(membri);
 
-/* <div class="team-card">
-<div class="card-image">
-  <img
-    src="img/wayne-barnett-founder-ceo.jpg"
-    alt="Wayne Barnett"
-  />
-</div>
-<div class="card-text">
-  <h3>Wayne Barnett</h3>
-  <p>Founder & CEO</p>
-</div>
-</div> */
 
 function card() {
     let cardMembri = document.getElementsByClassName('team-container')[0];
@@ -53,7 +41,7 @@ function card() {
         cardMembri.innerHTML += `
     <div class="team-card">
             <div class="card-image">
-                <img src=" ${membri[i].foto} " alt="Wayne Barnett"/>
+                <img src=" ${membri[i].foto} " alt="Wayne Barnett">
             </div>
         <div class="card-text">
             <h3> ${membri[i].nome} </h3>
